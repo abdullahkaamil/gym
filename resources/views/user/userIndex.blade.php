@@ -41,7 +41,6 @@
                                         <td class="text-center">{{ $user->name }}</td>
                                         <td class="text-center">{{ $user->email }}</td>
                                         <td class="text-center">{{ $user->roleUser->role->name }}</td>
-
                                         <td class="text-center">
                                             <div class="btn-group">
                                                 <button type="button" class="btn btn-info">Actions</button>
@@ -65,13 +64,9 @@
                                             </div>
                                         </td>
                                 </tr>
-
                                 @endforeach
-
-
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>

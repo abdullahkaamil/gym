@@ -464,4 +464,8 @@ class MembersController extends Controller
 
         return 'Select daterange filter';
     }
+
+    public function Workoutplan(){
+        return view("workoutPlan.index");
+    }
 }

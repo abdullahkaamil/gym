@@ -147,7 +147,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <input class="btn btn-primary" type="button" value="Add Workout Plan">
+                                            <a class="btn btn-primary" href="{{ route('Workout')}}">Add Workout Plan</a>
                                             </td>
                                         </tr>
                                      @endforeach
