@@ -16,7 +16,7 @@
 Improper permission on `storage` & `public` folder will lead to server & application errors
 
 ##  Installation
-1. Clone to your server root `git clone `
+1. Clone to your server root `git clone https://github.com/abdullahkaamil/gym `
 > For faster updates and bleeding edge features, or if you want to help test the next version, use the `develop` branch instead of the `master` branch.
 2. Run `composer install` to install all dependencies
 3. Create `.env` in application root 
