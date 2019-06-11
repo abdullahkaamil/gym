@@ -13,10 +13,8 @@
                 <small>Details of all gym members</small>
             </h1>
             @permission(['manage-gymie','pagehead-stats'])
-            <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right"><span data-toggle="counter" data-start="0"
-                                                                                                                     data-from="0" data-to="{{ $count }}"
-                                                                                                                     data-speed="600"
-                                                                                                                     data-refresh-interval="10"></span>
+            <h1 class="font-size-30 text-right color-blue-grey-600 animated fadeInDown total-count pull-right">
+                <span data-toggle="counter" data-start="0" data-from="0" data-to="{{ $count }}" data-speed="600" data-refresh-interval="10"></span>
                 <small class="color-blue-grey-600 display-block margin-top-5 font-size-14">Total Members</small>
             </h1>
             @endpermission
@@ -39,7 +37,7 @@
                                             {!! Form::label('member-daterangepicker','Date range') !!}
 
                                             <div id="member-daterangepicker"
-                                                 class="gymie-daterangepicker btn bg-grey-50 daterange-padding no-border color-grey-600 hidden-xs no-shadow">
+                                                class="gymie-daterangepicker btn bg-grey-50 daterange-padding no-border color-grey-600 hidden-xs no-shadow">
                                                 <i class="ion-calendar margin-right-10"></i>
                                                 <span>{{$drp_placeholder}}</span>
                                                 <i class="ion-ios-arrow-down margin-left-5"></i>
@@ -61,10 +59,8 @@
 
                                         <div class="col-xs-3">
                                             {!! Form::label('search','Keyword') !!}
-                                            <input value="{{ old('search') }}" name="search" id="search" type="text" class="form-control padding-right-35"
-                                                   placeholder="Search...">
+                                            <input value="{{ old('search') }}" name="search" id="search" type="text" class="form-control padding-right-35" placeholder="Search...">
                                         </div>
-
                                         <div class="col-xs-2">
                                             {!! Form::label('&nbsp;') !!} <br/>
                                             <button type="submit" class="btn btn-primary active no-border">GO</button>
@@ -134,7 +130,7 @@
                                                         </li>
                                                         <li>
                                                             @permission(['manage-gymie','manage-members','edit-member'])
-                                                            <a href="{{ action('MembersController@edit',['id' => $member->id]) }}">Edit details</a>
+                                                            <a href="{{ action('MembersController@edit' ,['id' => $member->id]) }}">Edit details</a>
                                                             @endpermission
                                                         </li>
                                                         <li>
@@ -147,7 +143,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                            <a class="btn btn-primary" href="{{ route('Workout')}}">Add Workout Plan</a>
+                                            <a class="btn btn-primary" href="{{ route('Workout' ,['id' => $member->id]) }}">Add Workout Plan</a>
                                             </td>
                                         </tr>
                                      @endforeach

@@ -79,7 +79,7 @@ Route::group(['prefix' => 'members', 'middleware' => ['auth']], function () {
     Route::post('{id}/update', ['middleware' => ['permission:manage-gymie|manage-members|edit-member'], 'uses' => 'MembersController@update']);
     Route::post('{id}/archive', ['middleware' => ['permission:manage-gymie|manage-members|delete-member'], 'uses' => 'MembersController@archive']);
     Route::get('{id}/transfer', ['middleware' => ['permission:manage-gymie|manage-enquiries|transfer-enquiry'], 'uses' => 'MembersController@transfer']);
-    Route::get('workoutplan', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workout','uses' => 'MembersController@Workoutplan']);
+    Route::get('{id}/workoutplan', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workout','uses' => 'MembersController@Workoutplan']);
 });
 
 //SmsController
