@@ -38,22 +38,27 @@
 
 @section('footer_script_init')
 <script type="text/javascript">
+state = 0;
     $('#add').on('click',function(){
         var c = $('select').val();
-        for(i=0; i<c; i++){
-            addRow(i);
-        }
+        a = c - state ;
+        addRow(a);
     });
-    
-    function addRow(i){
-        var div =  '<div class="form-group">'+
-                    '<label for="formGroupday1Input">Day '+(i+1)+':</label>'+
-                    '<textarea class="form-control" rows="5" cols="80" name="'+(i+1)+'"></textarea>'+
-                    '</div>';
-                    $('form').append(div);
+
+
+    function addRow(i)
+    {
+        
+        for(x =0; x<i ;i++){
+            var div =  '<div class="form-group">'+
+                '<label for="formGroupday1Input">Day '+(i)+':</label>'+
+                '<textarea class="form-control" rows="5" cols="80" name="'+(i)+'"></textarea>'+
+                '</div>';
+                $('form').append(div);
+        }
     }
 
-    
+
     </script>    
 
 @stop
