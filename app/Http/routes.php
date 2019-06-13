@@ -80,6 +80,8 @@ Route::group(['prefix' => 'members', 'middleware' => ['auth']], function () {
     Route::post('{id}/archive', ['middleware' => ['permission:manage-gymie|manage-members|delete-member'], 'uses' => 'MembersController@archive']);
     Route::get('{id}/transfer', ['middleware' => ['permission:manage-gymie|manage-enquiries|transfer-enquiry'], 'uses' => 'MembersController@transfer']);
     Route::get('{id}/workoutplan', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workout','uses' => 'MembersController@Workoutplan']);
+    Route::get('{id}/workoutplans', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workouts','uses' => 'MembersController@Work']);
+
 });
 
 //SmsController
@@ -241,11 +243,4 @@ Route::group(['prefix' => 'user/permission', 'middleware' => ['auth', 'role:Gymi
     Route::get('{id}/edit', 'AclController@editPermission');
     Route::post('{id}/update', 'AclController@updatePermission');
     Route::post('{id}/delete', 'AclController@deletePermission');
-});
-
-
-//workoutController
-Route::group(['prefix' => 'members', 'middleware' => ['auth']], function () {
-    // Route::get('{id}/workoutplan', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workout','uses' => 'MembersController@Workoutplan']);
-    Route::get('/', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workouts','uses' => 'WorkoutController@store']);
 });

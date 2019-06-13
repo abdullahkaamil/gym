@@ -17,7 +17,7 @@ use App\Subscription;
 use App\InvoiceDetail;
 use App\PaymentDetail;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Input;
 class MembersController extends Controller
 {
     public function __construct()
@@ -469,4 +469,12 @@ class MembersController extends Controller
         $member = Member::findOrFail($id);
         return view("workoutPlan.index", compact('member'));
     }
+    
+    public function work($id){
+$s = Input::get("day");
+dd($s);
+    }
+
+
+
 }

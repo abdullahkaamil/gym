@@ -41,7 +41,6 @@ class WorkoutController extends Controller
         //     'day'  => 1, 
         //     'workout_plan' =>"asdfasdfasasdfasdf"
         //     ]);
-        dd('asdfgadfgadf');
             // return view("workoutPlan.create");
     }
 
