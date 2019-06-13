@@ -13,7 +13,7 @@ class CreateMstMembersTable extends Migration
     public function up()
     {
         Schema::create('mst_members', function (Blueprint $table) {
-            $table->integer('id', true)->comment('Unique Record Id for system');
+            $table->integer('id', true)->unsigned()->index('member')->comment('Unique Record Id for system');
             $table->string('member_code', 50)->unique('member_id')->comment('Unique member id for reference');
             $table->string('name', 50)->comment('member\'s name');
             $table->string('photo', 50)->comment('member\'s photo');

@@ -30,7 +30,7 @@
                                     <div class="form-group">
                                         {!! Form::label('payment_amount','Amount') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('payment_amount',$payment_detail->invoice->pending_amount,['class'=>'form-control', 'id' => 'payment_amount']) !!}
                                         </div>
                                     </div>

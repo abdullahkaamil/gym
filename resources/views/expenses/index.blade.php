@@ -113,7 +113,7 @@
                                         <tr>
                                             <td class="text-center">{{ $expense->name }}</td>
                                             <td class="text-center">{{ $expense->category->name }}</td>
-                                            <td class="text-center"><i class="fa fa-inr"></i> {{ $expense->amount }}</td>
+                                            <td class="text-center"><i class="fa fa-turkish-lira"></i> {{ $expense->amount }}</td>
                                             <td class="text-center">{{ Utilities::expenseRepeatIntervel ($expense->repeat) }}</td>
                                             <td class="text-center">{{ $expense->due_date->format('Y-m-d') }}</td>
                                             <td class="text-center">{{ $expense->created_at->toDayDateTimeString() }}</td>

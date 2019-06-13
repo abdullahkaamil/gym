@@ -51,7 +51,7 @@
         <div class="form-group">
             {!! Form::label('amount','Amount') !!}
             <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                 {!! Form::text('amount',null,['class'=>'form-control','id'=>'amount']) !!}
             </div>
         </div>

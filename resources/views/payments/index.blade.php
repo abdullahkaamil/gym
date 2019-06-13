@@ -104,7 +104,7 @@
                                                 <a href="{{ action('MembersController@show',['id' => $payment_detail->member_id]) }}">{{ $payment_detail->member_name }}</a>
                                             </td>
                                             <td>
-                                                <i class="fa fa-inr"></i> {{ ($payment_detail->payment_amount >= 0 ? $payment_detail->payment_amount : str_replace("-","",$payment_detail->payment_amount)." (Paid)") }}
+                                                <i class="fa fa-turkish-lira"></i> {{ ($payment_detail->payment_amount >= 0 ? $payment_detail->payment_amount : str_replace("-","",$payment_detail->payment_amount)." (Paid)") }}
                                             </td>
                                             @if($payment_detail->mode == 1)
                                                 <td>{{ Utilities::getPaymentMode($payment_detail->mode)}}</td>

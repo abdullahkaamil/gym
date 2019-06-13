@@ -270,7 +270,7 @@
                                     <div class="form-group">
                                         {!! Form::label('admission_amount','Admission') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('admission_amount',Utilities::getSetting('admission_fee'),['class'=>'form-control', 'id' => 'admission_amount']) !!}
                                         </div>
                                     </div>
@@ -280,7 +280,7 @@
                                     <div class="form-group">
                                         {!! Form::label('subscription_amount','Gym subscription fee') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('subscription_amount',null,['class'=>'form-control', 'id' => 'subscription_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -290,7 +290,7 @@
                                     <div class="form-group">
                                         {!! Form::label('taxes_amount',sprintf('Tax @ %s %%',Utilities::getSetting('taxes'))) !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('taxes_amount',0,['class'=>'form-control', 'id' => 'taxes_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -318,7 +318,7 @@
                                     <div class="form-group">
                                         {!! Form::label('discount_amount','Discount amount') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('discount_amount',null,['class'=>'form-control', 'id' => 'discount_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -351,7 +351,7 @@
                                     <div class="form-group">
                                         {!! Form::label('payment_amount','Amount Received') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('payment_amount',null,['class'=>'form-control', 'id' => 'payment_amount', 'data-amounttotal' => '0']) !!}
                                         </div>
                                     </div>
@@ -361,7 +361,7 @@
                                     <div class="form-group">
                                         {!! Form::label('payment_amount_pending','Amount Pending') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('payment_amount_pending',null,['class'=>'form-control', 'id' => 'payment_amount_pending', 'readonly']) !!}
                                         </div>
                                     </div>

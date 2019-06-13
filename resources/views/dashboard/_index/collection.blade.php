@@ -11,7 +11,7 @@
                      data-speed="500" data-refresh-interval="10"></div>
             </div>
             <div class="pull-right">
-                <i class="font-size-24 color-green-100 fa fa-inr"></i>
+                <i class="font-size-24 color-green-100 fa fa-turkish-lira"></i>
             </div>
 
             <div class="clearfix"></div>

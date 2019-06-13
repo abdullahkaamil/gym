@@ -39,7 +39,7 @@
                                     <div class="form-group">
                                         {!! Form::label('subscription_amount','Subscription fee') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('subscription_amount',$invoice->invoiceDetails->sum('item_amount'),['class'=>'form-control', 'id' => 'subscription_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -49,7 +49,7 @@
                                     <div class="form-group">
                                         {!! Form::label('additional_fees','Additional fees') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('additional_fees',$invoice->additional_fees,['class'=>'form-control', 'id' => 'additional_fees','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                     <div class="form-group">
                                         {!! Form::label('taxes_amount',sprintf('Tax @ %s %%',Utilities::getSetting('taxes'))) !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('taxes_amount',$invoice->tax,['class'=>'form-control', 'id' => 'taxes_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>
@@ -87,7 +87,7 @@
                                     <div class="form-group">
                                         {!! Form::label('discount_amount','Discount amount') !!}
                                         <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-inr"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-turkish-lira"></i></div>
                                             {!! Form::text('discount_amount',$invoice->discount_amount,['class'=>'form-control', 'id' => 'discount_amount','readonly' => 'readonly']) !!}
                                         </div>
                                     </div>

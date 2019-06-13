@@ -244,3 +244,8 @@ Route::group(['prefix' => 'user/permission', 'middleware' => ['auth', 'role:Gymi
 });
 
 
+//workoutController
+Route::group(['prefix' => 'members', 'middleware' => ['auth']], function () {
+    // Route::get('{id}/workoutplan', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workout','uses' => 'MembersController@Workoutplan']);
+    Route::get('/', ['middleware' => ['permission:manage-gymie|manage-members|view-member'], 'as'=>'Workouts','uses' => 'WorkoutController@store']);
+});
