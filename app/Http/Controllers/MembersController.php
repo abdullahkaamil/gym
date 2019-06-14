@@ -465,15 +465,8 @@ class MembersController extends Controller
         return 'Select daterange filter';
     }
 
-    public function Workoutplan($id){
-        $member = Member::findOrFail($id);
-        return view("workoutPlan.index", compact('member'));
-    }
     
-    public function work($id){
-$s = Input::get("day");
-dd($s);
-    }
+    
 
 
 
