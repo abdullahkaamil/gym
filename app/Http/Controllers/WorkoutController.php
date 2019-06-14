@@ -23,10 +23,9 @@ class WorkoutController extends Controller
     public function Workoutplan($id){
         $member = Member::findOrFail($id);
         
-        $memberplan = workout::where('member_ID', $member->id)->get();
-        $result = json_decode($memberplan);
-        dd($result[0]);
-        return view("workoutPlan.index", compact('member' , 'memberplan'));
+        $memberplan = workout::where('member_ID', $member->id)->first();
+        $result = json_decode($memberplan->workout_plan);
+        return view("workoutPlan.index", compact('member' , 'result'));
     }
 
 
@@ -40,7 +39,7 @@ class WorkoutController extends Controller
                 'day'=> $day,
                 'workout_plan'=> json_encode($inputs)
             ];
-        dd($work);
+        // dd($work);
         $workout = new workout($work);
         $workout->save();
             return back();

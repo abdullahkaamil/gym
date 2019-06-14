@@ -31,12 +31,12 @@
 </div> 
 
 <table>
-        @foreach($memberplan as  $plan)
+        @foreach($result as  $plan)
     <tbody>
-        <tr>           
-        <td>{{$plan->member_ID}}</td>
-        <td>{{$plan->day}}</td>
-        <td>{{$plan->Workout_plan[0]}}</td>
+        <tr>    
+
+        <td>{{$plan}}</td>
+        
         
     </tr>
     </tbody>
